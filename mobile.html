@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="mobile.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
     <!--, maximum-scale=5.0, minimum-scale=1.0-->
@@ -48,7 +48,7 @@
     <div class="color-picker"></div>
     <div id="values"></div>
     <svg x="0px" y="0px"
-	 width="600px" height="600px" viewBox="0 0 595.28 841.89" enable-background="new 0 0 595.28 841.89">
+	 width="300px" height="300px" viewBox="0 0 595.28 841.89" enable-background="new 0 0 595.28 841.89">
         <g>
             <g>
                 <path id="color-indicator" class="color-picker" fill="#ffffff" d="M263.192,349.5l-62.473,96.32l0.997,1.172l159.094,117.888l23.973-32.343l-37.813-28.023
@@ -72,7 +72,7 @@
     
     <script>
         let colorIndicator = document.getElementById('color-indicator');
-        const colorPicker = new iro.ColorPicker("#color-picker", {width:450, color:"#fff"});
+        const colorPicker = new iro.ColorPicker("#color-picker", {width:300, color:"#fff"});
         colorPicker.on('color:change', function(color) {colorIndicator.style.fill=color.hexString;});
         var values = document.getElementById("values");
         colorPicker.on(["color:init", "color:change"], function (color) {
