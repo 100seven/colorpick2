@@ -44,7 +44,15 @@
 <body>
    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
    <script src="detectmobilebrowser.js"></script>
-   <script> if(jQuery.browser.mobile == true){ location.href="./mobile.html"; } </script>
+   <script> if(jQuery.browser.mobile == true){ location.href="mobile.html"; } </script>
+    <script>
+        function isMobile() { return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);}
+        if (isMobile()) {
+            location.href="mobile.html";// 모바일이면 실행될 코드 들어가는 곳
+        } else {
+            // 모바일이 아니면 실행될 코드 들어가는 곳
+        }
+    </script>
     <div class="color-picker"></div>
     <div id="values"></div>
     <svg x="0px" y="0px"
